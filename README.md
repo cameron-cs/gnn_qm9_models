@@ -22,7 +22,7 @@ The QM9 dataset, a standard dataset in molecule property prediction tasks, is lo
 ### Data shuffling and splitting
 To ensure reproducibility and prevent any bias, the dataset is shuffled using a fixed random seed (42). The shuffled dataset is then split into training, validation, and test sets:
 
-- Training set: 110,831 graphs
+- Training set: 130,831 graphs
 
 - Validation set: 10,000 graphs
 
