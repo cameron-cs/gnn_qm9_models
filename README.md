@@ -1,5 +1,19 @@
 # gnn_qm9_models
 
+
+## About the QM9 dataset
+The QM9 dataset is a widely-used benchmark in the field of quantum chemistry and molecular machine learning. It contains a comprehensive collection of 134,000 small organic molecules composed of carbon (C), hydrogen (H), oxygen (O), nitrogen (N), and fluorine (F) atoms. Each molecule in the QM9 dataset is characterized by a set of features and multiple quantum mechanical properties, making it an ideal dataset for tasks such as molecular property prediction, quantum chemistry studies, and the development of graph neural networks.
+
+Key features of the QM9 dataset:
+
+- Molecular graphs: each molecule is represented as a graph where atoms correspond to nodes and bonds correspond to edges. This graph representation is fundamental for leveraging graph neural networks (GNNs) in property prediction tasks.
+
+- Atomic features: the dataset includes 11 atomic features per node, such as atom type, valence, and hybridization state, which provide rich information about the molecular structure.
+
+- Quantum mechanical properties: the dataset includes 19 regression targets, representing various quantum mechanical properties such as the energy of the highest occupied molecular orbital (HOMO), the energy of the lowest unoccupied molecular orbital (LUMO), and the isotropic polarizability.
+
+- Standardization and availability: the dataset is standardized and publicly available, making it a reliable resource for benchmarking and comparing machine learning models in molecular studies.
+
 ## QM9 dataset preprocessing and statistics
 
 ### Dataset loading
