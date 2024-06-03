@@ -1,0 +1,18 @@
+model:
+  hidden_channels: 128
+
+data:
+  path: data
+
+training:
+  num_epochs: 200
+  patience: 25
+  learning_rate: 0.001
+  batch_size: 128
+  num_workers: 4
+
+scheduler:
+  mode: 'min'
+  factor: 0.7
+  patience: 5
+  min_lr: 0.00001
