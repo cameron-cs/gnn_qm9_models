@@ -130,7 +130,7 @@ if __name__ == '__main__':
     criterion = torch.nn.L1Loss()
 
     # training the model
-    gcn_train_loss, gcn_val_loss, gcn_val_mae = train_model(model, 'GCN', optimizer, scheduler, train_loader,
+    gcn_train_loss, gcn_val_loss, gcn_val_mae = train_model(model, 'GraphClassificationModel', optimizer, scheduler, train_loader,
                                                             val_loader,
                                                             num_epochs=config['training']['num_epochs'],
                                                             patience=config['training']['patience'])

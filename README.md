@@ -65,7 +65,7 @@ The GraphClassificationModel was chosen for its efficiency and simplicity in lev
 ### Architecture breakdown:
 
 1. **Input features**:
-   - **Number of features**: The input features for each node in the graph have a dimension of 11. This is specified when the `GCN` class is instantiated with `num_features=11`.
+   - **Number of features**: The input features for each node in the graph have a dimension of 11. This is specified when the `GraphClassificationModel` class is instantiated with `num_features=11`.
 
 2. **Convolutional layers**:
    - **conv1 (GCNConv(11, 128))**:
@@ -132,7 +132,7 @@ This architecture is designed for a regression task on graph data, where the goa
 
 # Insights & results
 
-## Primary results of the GCN model
+## Primary results of the GraphClassificationModel model
 
 The primary evaluation metrics for the GCN model are as follows:
 
@@ -140,14 +140,14 @@ The primary evaluation metrics for the GCN model are as follows:
 
 - Test MAE: 0.738557
 
-For the GCN model, the primary evaluation metric is the Mean Absolute Error (MAE) on the test set. The obtained MAE is 17.031112. This low MAE indicates that the GCN model is able to predict the target molecular properties with a relatively high degree of accuracy.
+For the GraphClassificationModel model, the primary evaluation metric is the Mean Absolute Error (MAE) on the test set. The obtained MAE is 17.031112. This low MAE indicates that the GraphClassificationModel model is able to predict the target molecular properties with a relatively high degree of accuracy.
 
-## Insights and explanations for the GCN model
+## Insights and explanations for the GraphClassificationModel model
 
 The GCN model demonstrated a test loss of 0.559448 and a mean absolute error (MAE) of 0.738557. These results indicate that the GCN model performs well on the QM9 dataset for predicting molecular properties.
 
 
-## Several factors contribute to the effectiveness of the GCN model
+## Several factors contribute to the effectiveness of the GraphClassificationModel model
 
 ### Hierarchical learning
 
