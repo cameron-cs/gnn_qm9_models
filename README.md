@@ -32,9 +32,6 @@ These statistics are printed to provide an overview of the dataset characteristi
 
 ### Implementation summary
 The preprocessing steps ensure the dataset is well-prepared for training Graph Neural Network (GNNs).
-## Graph ML models
-
-For this project, I employed two distinct Graph Neural Network (GNN) architectures: the Graph Convolutional Network (GCN) and the Graph Attention Network (GAT). These models were chosen due to their respective strengths in processing graph-structured data and their relevance to the molecular property prediction task. Here is a detailed description of each model, including the rationale behind their selection and design.
 
 ### Graph Convolutional Network (GraphClassificationModel)
 
