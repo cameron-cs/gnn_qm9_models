@@ -2,17 +2,17 @@
 
 
 ## About the QM9 dataset
-The QM9 dataset is a widely-used benchmark in the field of quantum chemistry and molecular machine learning. It contains a comprehensive collection of 134,000 small organic molecules composed of carbon (C), hydrogen (H), oxygen (O), nitrogen (N), and fluorine (F) atoms. Each molecule in the QM9 dataset is characterized by a set of features and multiple quantum mechanical properties, making it an ideal dataset for tasks such as molecular property prediction, quantum chemistry studies, and the development of graph neural networks.
+The QM9 dataset is a widely-used benchmark in the field of quantum chemistry and molecular machine learning. It contains a comprehensive collection of 134,000 small organic molecules composed of carbon (C), hydrogen (H), oxygen (O), nitrogen (N), and fluorine (F) atoms. Each molecule in the QM9 dataset is characterised by a set of features and multiple quantum mechanical properties, making it an ideal dataset for tasks such as molecular property prediction, quantum chemistry studies, and the development of graph neural networks.
 
 Key features of the QM9 dataset:
 
 - Molecular graphs: each molecule is represented as a graph where atoms correspond to nodes and bonds correspond to edges. This graph representation is fundamental for leveraging graph neural networks (GNNs) in property prediction tasks.
 
-- Atomic features: the dataset includes 11 atomic features per node, such as atom type, valence, and hybridization state, which provide rich information about the molecular structure.
+- Atomic features: the dataset includes 11 atomic features per node, such as atom type, valence, and hybridisation state, which provide rich information about the molecular structure.
 
-- Quantum mechanical properties: the dataset includes 19 regression targets, representing various quantum mechanical properties such as the energy of the highest occupied molecular orbital (HOMO), the energy of the lowest unoccupied molecular orbital (LUMO), and the isotropic polarizability.
+- Quantum mechanical properties: the dataset includes 19 regression targets, representing various quantum mechanical properties such as the energy of the highest occupied molecular orbital (HOMO), the energy of the lowest unoccupied molecular orbital (LUMO), and the isotropic polarisability.
 
-- Standardization and availability: the dataset is standardized and publicly available, making it a reliable resource for benchmarking and comparing machine learning models in molecular studies.
+- Standardisation and availability: the dataset is standardised and publicly available, making it a reliable resource for benchmarking and comparing machine learning models in molecular studies.
 
 ## QM9 dataset preprocessing and statistics
 
@@ -31,10 +31,10 @@ To ensure reproducibility and prevent any bias, the dataset is shuffled using a 
 This split ratio ensures a substantial amount of data is available for training while keeping enough samples for validation and testing to evaluate the model's performance.
 
 ### Normalisation
-Normalisation is a crucial preprocessing step in machine learning, particularly for regression tasks. The target variable (property) at index 15 is normalized using the mean and standard deviation computed from the training set. This normalization ensures that the model training is stable and the gradient descent converges more efficiently.
+Normalisation is a crucial preprocessing step in machine learning, particularly for regression tasks. The target variable (property) at index 15 is normalised using the mean and standard deviation computed from the training set. This normalisation ensures that the model training is stable and the gradient descent converges more efficiently.
 
 ### Summary statistics
-The dataset is summarized as follows:
+The dataset is summarised as follows:
 
 - Number of graphs: 130,831
 
@@ -53,7 +53,7 @@ The preprocessing steps ensure the dataset is well-prepared for training Graph N
 
 The GraphClassificationModel model leverages the standard GCN layers to capture the structural and feature information of the molecules. The architecture comprises three GCN layers, followed by two fully connected (linear) layers.
 
-The code implementation of the GCN model is modularized and made production-ready by defining separate classes for the GCN layer and the model itself.
+The code implementation of the GCN model is modularised and made production-ready by defining separate classes for the GCN layer and the model itself.
 
 #### Why 3 layers?
 
@@ -65,7 +65,7 @@ The hidden channel size of 128 strikes a balance between model capacity and comp
 
 #### Why 64 units in the fully connected layer?
 
-The fully connected layer with 64 units is chosen to reduce the dimensionality of the learned representations before the final output layer. This layer helps in distilling the most important features from the convolutional layers, improving the model's ability to generalize. The choice of 64 units is a trade-off between preserving enough information and reducing complexity.
+The fully connected layer with 64 units is chosen to reduce the dimensionality of the learned representations before the final output layer. This layer helps in distilling the most important features from the convolutional layers, improving the model's ability to generalise. The choice of 64 units is a trade-off between preserving enough information and reducing complexity.
 
 ### GraphClassificationModel
 
@@ -172,9 +172,9 @@ The global mean pooling operation aggregates node features into a graph-level re
 
 The use of the ReLU activation function introduces non-linearity into the model, allowing it to capture more complex patterns in the data. ReLU helps to avoid the vanishing gradient problem and accelerates the convergence of the training process. This non-linearity is essential for the model to learn intricate molecular interactions.
 
-### Regularization with dropout
+### Regularisation with dropout
 
-Incorporating dropout layers in the GCN model helps to prevent overfitting by randomly setting a fraction of the input units to zero during training. Dropout acts as a form of regularization, forcing the model to learn robust features that generalize well to unseen data. This is particularly important given the complexity of the QM9 dataset, which contains diverse molecular structures.
+Incorporating dropout layers in the GCN model helps to prevent overfitting by randomly setting a fraction of the input units to zero during training. Dropout acts as a form of regularisation, forcing the model to learn robust features that generalise well to unseen data. This is particularly important given the complexity of the QM9 dataset, which contains diverse molecular structures.
 
 ### Depth and capacity with 3 layers and 128 hidden channels}
 
@@ -182,15 +182,15 @@ The choice of using three convolutional layers is motivated by the need to balan
 
 ### Dimensionality reduction with fully connected layers
 
-The fully connected layer with 64 units is chosen to reduce the dimensionality of the learned representations before the final output layer. This layer helps in distilling the most important features from the convolutional layers, improving the model's ability to generalize. The choice of 64 units is a trade-off between preserving enough information and reducing complexity.
+The fully connected layer with 64 units is chosen to reduce the dimensionality of the learned representations before the final output layer. This layer helps in distilling the most important features from the convolutional layers, improving the model's ability to generalise. The choice of 64 units is a trade-off between preserving enough information and reducing complexity.
 
 ## Summary
 
-The GCN model's architecture and design choices have proven effective for the task of molecular property prediction on the QM9 dataset. The combination of hierarchical learning through multiple GCN layers, effective aggregation with global mean pooling, non-linearity with ReLU activation, regularization with dropout, and appropriate depth and capacity with hidden channels and fully connected layers contribute to the model's strong performance. These insights demonstrate the importance of careful architectural design in graph neural networks for achieving high performance in real-world applications.
+The GCN model's architecture and design choices have proven effective for the task of molecular property prediction on the QM9 dataset. The combination of hierarchical learning through multiple GCN layers, effective aggregation with global mean pooling, non-linearity with ReLU activation, regularisation with dropout, and appropriate depth and capacity with hidden channels and fully connected layers contribute to the model's strong performance. These insights demonstrate the importance of careful architectural design in graph neural networks for achieving high performance in real-world applications.
 
 ![Predicted energy.png](imgs%2Fpredicted.png)
 
-The plot presents the results of the Graph Convolutional Network (GCN) model's performance on the QM9 dataset, specifically for predicting the energy of molecules. The evaluation metrics and visualization provide insights into the model's accuracy and reliability.
+The plot presents the results of the Graph Convolutional Network (GCN) model's performance on the QM9 dataset, specifically for predicting the energy of molecules. The evaluation metrics and visualisation provide insights into the model's accuracy and reliability.
 
 ## Ideal fit line
 The red line represents the ideal fit where the predicted energy values perfectly match the actual energy values. This line serves as a benchmark to assess the performance of the model.
